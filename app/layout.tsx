@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Singularity',
+  title: 'Singureality',
   description: 'Reflections on the far future of humanity. Exploring the social, technological, and existential transformations that await our species across millennia.',
   keywords: ['future', 'humanity', 'technology', 'philosophy', 'civilization', 'posthuman', 'far future', 'speculation'],
 }

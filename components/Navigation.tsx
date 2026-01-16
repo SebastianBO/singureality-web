@@ -23,7 +23,7 @@ export default function Navigation() {
               <span className="text-white font-bold text-sm">S</span>
             </div>
             <div className="flex items-center">
-              <span className="text-xl font-serif text-navy-800 tracking-wide">Singularity</span>
+              <span className="text-xl font-serif text-navy-800 tracking-wide">Singureality</span>
             </div>
           </Link>
 

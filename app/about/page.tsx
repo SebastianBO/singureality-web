@@ -8,7 +8,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <p className="overline mb-4 text-violet-400">About</p>
-            <h1 className="text-white mb-6">Why Singularity Exists</h1>
+            <h1 className="text-white mb-6">Why Singureality Exists</h1>
             <div className="divider mb-8" />
             <p className="subtitle text-gray-300 leading-relaxed">
               A space for contemplating the vast future that awaits humanity.
@@ -36,7 +36,7 @@ export default function About() {
             </p>
 
             <p>
-              Singularity is a place to think about that. Not to predict&mdash;prediction
+              Singureality is a place to think about that. Not to predict&mdash;prediction
               is impossible at these scales&mdash;but to imagine. To explore the possibility
               space. To consider what it might mean to be human, or post-human, or something
               else entirely, across millennia and eons.

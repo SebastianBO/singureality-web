@@ -80,7 +80,7 @@ export default function Home() {
             But humanity&apos;s story stretches into incomprehensible spans of time.
           </p>
           <p className="text-gray-600 leading-relaxed text-lg">
-            Singularity is an anonymous space to explore that vast future. What happens
+            Singureality is an anonymous space to explore that vast future. What happens
             when we spread to the stars? When death becomes optional? When artificial
             minds surpass our own? When the last star burns out? Share your visions,
             read others, and contemplate the strange and beautiful futures that await.

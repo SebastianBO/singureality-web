@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-violet-700 rounded-full flex items-center justify-center mr-3">
                 <span className="text-white font-bold text-sm">S</span>
               </div>
-              <span className="text-2xl font-serif text-white tracking-wide">Singularity</span>
+              <span className="text-2xl font-serif text-white tracking-wide">Singureality</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
               Reflections on the far future of humanity. Exploring the social,
@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-navy-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Singularity. Contemplating tomorrow.
+            &copy; {currentYear} Singureality. Contemplating tomorrow.
           </p>
         </div>
       </div>
