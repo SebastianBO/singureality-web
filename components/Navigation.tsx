@@ -8,8 +8,8 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'Home', href: '/' },
+    { name: 'Essays', href: '/essays' },
     { name: 'About', href: '/about' },
-    { name: 'Focus Areas', href: '/services' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -19,8 +19,8 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-navy-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+            <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-navy-800 rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-sm">S</span>
             </div>
             <div className="flex items-center">
               <span className="text-xl font-serif text-navy-800 tracking-wide">Singularity</span>

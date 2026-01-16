@@ -4,17 +4,17 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Futuristic/Abstract */}
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image - Deep Space */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80&fm=jpg)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1920&q=80&fm=jpg)',
         }}
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-navy-900/85" />
+      <div className="absolute inset-0 bg-navy-900/80" />
 
       {/* Subtle Pattern Overlay */}
       <div className="absolute inset-0 opacity-5">
@@ -28,12 +28,12 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto">
           {/* Overline */}
           <p className="overline mb-6 text-violet-400">
-            Technology Investment for the Future
+            Anonymous Reflections on the Far Future
           </p>
 
           {/* Main Heading */}
           <h1 className="hero-text text-white mb-8">
-            Investing at the Edge<br />of Intelligence
+            What Will Humanity<br />Become?
           </h1>
 
           {/* Divider */}
@@ -41,22 +41,20 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="subtitle text-gray-300 max-w-2xl mx-auto mb-12">
-            Singularity is a private technology investment firm focused on artificial
-            intelligence, quantum computing, and the transformative technologies
-            defining the next era of human progress.
+            A collective journal of speculative thought. Share your visions of
+            humanity&apos;s future&mdash;ten thousand years from now, a million,
+            or beyond the heat death of the universe.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex justify-center">
-            <Link href="/about" className="btn-outline">
-              Explore Our Vision
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/essays" className="btn-outline">
+              Read Essays
+            </Link>
+            <Link href="/submit" className="btn-primary">
+              Share Your Vision
             </Link>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <div className="w-px h-16 bg-gradient-to-b from-transparent via-violet-500/50 to-violet-500" />
         </div>
       </div>
     </section>

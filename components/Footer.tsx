@@ -7,26 +7,24 @@ export default function Footer() {
     <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Company Info */}
+          {/* Site Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-violet-700 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-lg">S</span>
+              <div className="w-9 h-9 bg-gradient-to-br from-violet-500 to-violet-700 rounded-full flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-sm">S</span>
               </div>
               <span className="text-2xl font-serif text-white tracking-wide">Singularity</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-              A private technology investment firm focused on artificial intelligence,
-              quantum computing, and transformative deep tech shaping the future.
+              Reflections on the far future of humanity. Exploring the social,
+              technological, and existential transformations that await our species
+              across millennia and beyond.
             </p>
-            <div className="text-gray-400 text-sm">
-              <p>San Francisco, California</p>
-            </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-white">Navigation</h4>
+            <h4 className="font-serif text-lg mb-6 text-white">Explore</h4>
             <ul className="space-y-3">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200">
@@ -34,13 +32,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200">
-                  About
+                <Link href="/essays" className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200">
+                  Essays
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200">
-                  Focus Areas
+                <Link href="/about" className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200">
+                  About
                 </Link>
               </li>
               <li>
@@ -51,18 +49,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Topics */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-white">Contact</h4>
+            <h4 className="font-serif text-lg mb-6 text-white">Topics</h4>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="mailto:contact@singularity.vc"
-                  className="text-gray-400 hover:text-violet-400 text-sm transition-colors duration-200"
-                >
-                  contact@singularity.vc
-                </a>
-              </li>
+              <li className="text-gray-400 text-sm">Posthuman Futures</li>
+              <li className="text-gray-400 text-sm">Cosmic Civilization</li>
+              <li className="text-gray-400 text-sm">Digital Consciousness</li>
+              <li className="text-gray-400 text-sm">Social Evolution</li>
             </ul>
           </div>
         </div>
@@ -70,16 +64,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-navy-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Singularity. All rights reserved.
+            &copy; {currentYear} Singularity. Contemplating tomorrow.
           </p>
-          <div className="flex space-x-8 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-200">
-              Privacy
-            </Link>
-            <Link href="/terms" className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-200">
-              Legal
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
