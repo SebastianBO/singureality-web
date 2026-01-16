@@ -41,10 +41,10 @@ export default function Contact() {
                 inquiries, reach out via email.
               </p>
               <a
-                href="mailto:hello@singularity.blog"
+                href="mailto:hello@singureality.blog"
                 className="text-violet-600 hover:text-violet-700 transition-colors"
               >
-                hello@singularity.blog
+                hello@singureality.blog
               </a>
             </div>
 
