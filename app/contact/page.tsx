@@ -90,7 +90,7 @@ export default function Contact() {
                   </h3>
                   <p className="text-gray-600 text-sm">
                     Yes. You retain rights to your ideas. We simply have permission to
-                    display your essay on Singularity.
+                    display your essay on Singureality.
                   </p>
                 </div>
 
