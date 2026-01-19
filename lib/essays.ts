@@ -1,4 +1,4 @@
-import { put, list, del } from '@vercel/blob'
+import { r2Put, r2List, r2Del, r2Get } from './r2'
 import { v4 as uuidv4 } from 'uuid'
 
 export interface Essay {
@@ -49,11 +49,10 @@ export async function createEssay(submission: EssaySubmission): Promise<Essay> {
     readTime: calculateReadTime(submission.content),
   }
 
-  const blob = await put(
+  await r2Put(
     `${ESSAYS_PREFIX}${id}.json`,
     JSON.stringify(essay),
     {
-      access: 'public',
       contentType: 'application/json',
     }
   )
@@ -63,13 +62,10 @@ export async function createEssay(submission: EssaySubmission): Promise<Essay> {
 
 export async function getEssay(id: string): Promise<Essay | null> {
   try {
-    const { blobs } = await list({ prefix: `${ESSAYS_PREFIX}${id}.json` })
-    if (blobs.length === 0) return null
+    const content = await r2Get(`${ESSAYS_PREFIX}${id}.json`)
+    if (!content) return null
 
-    const response = await fetch(blobs[0].url)
-    if (!response.ok) return null
-
-    return await response.json()
+    return JSON.parse(content) as Essay
   } catch (error) {
     console.error('Error fetching essay:', error)
     return null
@@ -78,14 +74,16 @@ export async function getEssay(id: string): Promise<Essay | null> {
 
 export async function getAllEssays(): Promise<Essay[]> {
   try {
-    const { blobs } = await list({ prefix: ESSAYS_PREFIX })
+    const { blobs } = await r2List({ prefix: ESSAYS_PREFIX })
 
     const essays = await Promise.all(
       blobs.map(async (blob) => {
         try {
-          const response = await fetch(blob.url)
-          if (!response.ok) return null
-          return await response.json() as Essay
+          // Extract the key without the folder prefix for r2Get
+          const key = blob.key
+          const content = await r2Get(key)
+          if (!content) return null
+          return JSON.parse(content) as Essay
         } catch {
           return null
         }
@@ -108,7 +106,7 @@ export async function getEssaysByTopic(topic: string): Promise<Essay[]> {
 
 export async function deleteEssay(id: string): Promise<boolean> {
   try {
-    await del(`${ESSAYS_PREFIX}${id}.json`)
+    await r2Del(`${ESSAYS_PREFIX}${id}.json`)
     return true
   } catch (error) {
     console.error('Error deleting essay:', error)
