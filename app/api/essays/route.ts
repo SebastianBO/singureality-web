@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createEssay, getAllEssays, type EssaySubmission } from '@/lib/essays'
 
+export const runtime = 'edge'
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
